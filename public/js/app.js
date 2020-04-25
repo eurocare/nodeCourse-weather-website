@@ -1,6 +1,3 @@
-console.log('Client side js V8 is loaded')
-
-
 const weatherForm = document.querySelector('form') //js not node
 const search = document.querySelector('input')
 const messageOne = document.querySelector('#message-1')
