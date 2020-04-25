@@ -8,8 +8,10 @@ const forecast = require('./utils/forecast')
 // console.log(__dirname)
 // console.log(path.join(__dirname, '../public'))
 
-// Define paths for Express config
 const app = express()
+const port = process.env.PORT || 3000 //heroku port || local port
+
+// Define paths for Express config
 const publicPath = path.join(__dirname, '../public')
 const viewsPath = path.join(__dirname, '../templates/views')
 const partialsPath = path.join(__dirname, '../templates/partials')
@@ -109,6 +111,6 @@ app.get('*', (req, res) => { // always at the end before listen
     })
 })
 
-app.listen(3000, () => {
-    console.log('Server is up on port 3000.')
+app.listen(port, () => {
+    console.log('Server is up on port ' + port)
 })
